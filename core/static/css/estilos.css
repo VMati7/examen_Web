@@ -1,0 +1,141 @@
+.titulo1{ 
+        color:greenyellow;
+        font-size: 60px; 
+        text-align: center; 
+        background: black; /*esto es para cambiar el color del fondo del div*/
+        border-style:double ; /*esto es para usar un estilo de borde para el div*/
+        border-width: 20px; /*esto es para darle el ancho al borde del div, si no se ve es por que debe ser mas grande y debes subir los pixeles*/
+        border-color: green; /*esto es para modificar el color del borde del div que puede tener un estilo como puede ser de puntos o no */
+        
+        
+        
+}
+.titulo2{
+    text-align: center; 
+    color:gold;
+    font-size: 50px; 
+    background: black; /*esto es para cambiar el color del fondo del div*/
+    border-style:double ; /*esto es para usar un estilo de borde para el div*/
+    border-width: 20px; /*esto es para darle el ancho al borde del div, si no se ve es por que debe ser mas grande y debes subir los pixeles*/
+    border-color: goldenrod; /*esto es para modificar el color del borde del div que puede tener un estilo como puede ser de puntos o no */
+}
+.titulo3{
+    
+        text-align: center; 
+        color:red;
+        font-size: 50px; 
+        text-align: center; 
+        background: black; /*esto es para cambiar el color del fondo del div*/
+        border-style:double ; /*esto es para usar un estilo de borde para el div*/
+        border-width: 20px; /*esto es para darle el ancho al borde del div, si no se ve es por que debe ser mas grande y debes subir los pixeles*/
+        border-color: cyan; /*esto es para modificar el color del borde del div que puede tener un estilo como puede ser de puntos o no */
+}
+p{
+        color:greenyellow;
+        font-size: 20px; 
+        text-align: center; 
+        background: black; /*esto es para cambiar el color del fondo del div*/
+        border-style:double ; /*esto es para usar un estilo de borde para el div*/
+        border-width: 20px; /*esto es para darle el ancho al borde del div, si no se ve es por que debe ser mas grande y debes subir los pixeles*/
+        border-color: green; /*esto es para modificar el color del borde del div que puede tener un estilo como puede ser de puntos o no */
+}
+
+.precio{
+  color:gold;
+  font-size: 20px; 
+  text-align: center; 
+  background: black; /*esto es para cambiar el color del fondo del div*/
+  border-style:double ; /*esto es para usar un estilo de borde para el div*/
+  border-width: 20px; /*esto es para darle el ancho al borde del div, si no se ve es por que debe ser mas grande y debes subir los pixeles*/
+  border-color: goldenrod; /*esto es para modificar el color del borde del div que puede tener un estilo como puede ser de puntos o no */
+}
+
+body{
+    background: url("../imagenes/fondo1l.jpg");
+    font-family: Arial, sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.column {
+  flex: 0 0 calc(25% - 20px);
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0 10px;
+}
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .column {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+@media screen and (max-width: 480px) {
+  .column {
+    flex: 0 0 100%;
+  }
+}
+.image{
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 10px double black;
+}
+.boton_volver_inicia_crea_sesion{
+    text-align: center; 
+    margin-top: 30px;
+
+}
+.boton_inicia_sesion{
+    margin-top: 30px;
+    text-align: center; 
+}
+.boton_crea_usuario{
+    text-align: center; 
+}
+
+.crea_sesion{
+    text-align: center; 
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.product-image {
+    max-width: 300px;
+    max-height: 300px;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.checkout-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.summary {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}

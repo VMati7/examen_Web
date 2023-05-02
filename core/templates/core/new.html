@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/estilos.css" %}">
+</head>
+<body>
+  <div class="titulo1"><h1 class="checkout-title">CuadroGames</h1></div>
+    <div class=titulo3>
+        <h3>NEW!</h3>
+    </div>
+        <div>
+            
+            <div class="container">
+                <div class="column">
+                  <a href="codmw2_producto.html">
+                  <img src="{% static 'imagenes/codmw2_cover.jpg' %}" alt="Imagen new 1" class="image">
+                  <p>50cm X 40m</p>
+                  </a>
+                </div>
+                <div class="column">
+                  <a href="spiderman_producto.html">
+                  <img src="{% static 'imagenes/spiderman_cover.png' %}" alt="Imagen new 2" class="image">
+                  <p>50cm X 40m</p>
+                  </a>
+                </div>
+                <div class="column">
+                  <a href="bf_2042_producto.html">
+                  <img src="{% static 'imagenes/Battlefield_2042_Cover.jpg' %}" alt="Imagen new 3" class="image">
+                  <p>86cm X 56cm</p>
+                  </a>
+                </div>
+                <div class="column">
+                  <a href="elden_ring_producto.html">
+                  <img src="{% static 'imagenes/eldenring_cover.jpg' %}" alt="Imagen new 4" class="image">
+                  <p>86cm X 56cm</p>
+                  </a>
+                </div>
+              </div>
+        </div>
+        <a href="{% url 'index' %}"><button type="button" class="btn btn-secondary">Volver a la página principal</button></a>
+        
+</body>
+</html>

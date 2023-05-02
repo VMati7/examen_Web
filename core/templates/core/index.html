@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuadroGames</title>
+    <link rel="stylesheet" href="{% static "css/estilos.css" %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+</head>
+<div class=titulo1>
+<h1>CuadroGames</h1>
+
+</div>
+<!--barra de navegacion-->
+<div>
+  <p>Temperatura: {{ temperatura }}°C</p>
+  <p>Hora local: {{ hora_local }}</p>
+</div>
+<div class="container">
+  <p>Valor del dólar frente al peso chileno: {{ tipo_cambio }}</p>
+</div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'inicia_crea_sesion' %}"><button type="button" class="btn btn-primary">Iniciar Sesion</button></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'lo_mas_vendido' %}"><button type="button" class="btn btn-danger">Los mas Vendidos</button></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'new' %}"><button type="button" class="btn btn-success">¡Nuevos!</button></a>
+              </li>
+              
+              
+              
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Ej: Halo" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+            <form class="d-flex" role="search">
+                
+                <a href="{% url 'carrito' %}"><button type="button" class="btn btn-outline-danger">Carrito</button></a>
+                
+              </form>
+          </div>
+        </div>
+      </nav>
+
+<div class=titulo2>
+    <h4>Los mas vendidos</h4>
+</div>
+<div>
+    
+    <div class="container">
+        <div class="column">
+          <a href="{% url 'halo_infinite_producto' %}"></ahref>
+            <img src="{% static "imagenes/halo_infinite_cover.png" %}" alt="Imagen 1" class="image">
+          
+            <p>50cm X 40m</p>
+          </a>
+        </div>
+        <div class="column">
+          <a href="{% url 'halo_ce_producto' %}"></ahref>
+            <img src="{% static "imagenes/halo_ce_cover.png" %}" alt="Imagen 2" class="image">
+            <p>50cm X 40m</p>
+          </a>
+        </div>
+        <div class="column">
+          <a href="{% url 'destiny_producto' %}"></ahref>
+            <img src="{% static "imagenes/destiny_cover.jpg" %}" alt="Imagen 3" class="image">
+          <p>86cm X 56cm</p>
+          </a>
+        </div>
+        <div class="column">
+          <a href="{% url 'FF7_producto' %}"></ahref>
+            <img src="{% static "imagenes/ff7_cover.jpg" %}" alt="Imagen 4" class="image">
+          <p>86cm X 56cm</p>
+          </a>
+        </div>
+      </div>
+</div>
+<body>
+    
+</body>
+<div class=titulo3>
+    <h3>NEW!</h3>
+</div>
+<footer>
+    <div>
+        
+        <div class="container">
+            <div class="column">
+              <a href="{% url 'codmw2_producto' %}"></ahref>
+              <img src="{% static "imagenes/codmw2_cover.jpg" %}" alt="Imagen new 1" class="image">
+              <p>50cm X 40m</p>
+              </a>
+            </div>
+            <div class="column">
+              <a href="{% url 'spiderman_producto' %}"></ahref>
+              <img src="{% static "imagenes/spiderman_cover.png" %}" alt="Imagen new  2" class="image">
+              <p>50cm X 40m</p>
+              </a>
+            </div>
+            <div class="column">
+              <a href="{% url 'bf_2042_producto' %}"></ahref>
+              <img src="{% static "imagenes/battlefield_2042_cover.jpg" %}" alt="Imagen new  3" class="image">
+              <p>86cm X 56cm</p>
+              </a>
+            </div>
+            <div class="column">
+              <a href="{% url 'elden_ring_producto' %}"></ahref>
+              <img src="{% static "imagenes/eldenring_cover.jpg" %}" alt="Imagen new  4" class="image">
+              <p>86cm X 56cm</p>
+              </a>
+            </div>
+          </div>
+    </div>
+    
+</footer>
+</html>
