@@ -2,6 +2,7 @@ from django.urls import path
 from.views import index
 from . import views
 
+app_name = 'core'
 urlpatterns =[
     path('', index, name="index"),
     path('iniciar_sesion/', views.inicia_crea_sesion, name='inicia_crea_sesion'),
@@ -18,6 +19,8 @@ urlpatterns =[
     path('bf_2042_producto/', views.bf_2042_producto, name='bf_2042_producto'),
     path('elden_ring_producto/', views.elden_ring_producto, name='elden_ring_producto'),
     path('modificar_usuario/', views.modificar_usuario, name='modificar_usuario'),
+    path('login/', views.login_view, name='login'),
+    path('register/', views.register_view, name='register'),
     path("", views.index, name="index"),
 
   

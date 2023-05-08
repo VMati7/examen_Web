@@ -1,7 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import requests
 from datetime import datetime
 import pytz
+
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+from .forms import LoginForm, RegisterForm
 
 
 # Create your views here.
@@ -106,6 +110,33 @@ def index(request):
     
     return render(request, "core/index.html", context)
 
+
+
+def login_view(request):
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            user = authenticate(request, username=form.cleaned_data['username'], password=form.cleaned_data['password'])
+            if user is not None:
+                login(request, user)
+                return redirect('core:index')
+    else:
+        form = LoginForm()
+    return render(request, 'core/login.html', {'form': form})
+
+def register_view(request):
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('core:login')
+    else:
+        form = RegisterForm()
+    return render(request, 'core/register.html', {'form': form})
+
+@login_required
+def index(request):
+    return render(request, 'core/index.html')
 
 
 

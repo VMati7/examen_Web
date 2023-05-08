@@ -78,10 +78,15 @@ WSGI_APPLICATION = 'sumativa2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'webmati_high',
+        'USER': 'ADMIN',
+        'PASSWORD': 'Megaman12345*',
+        'HOST': 'WebMati',
+        'PORT': '1521',  
     }
 }
+
 
 
 # Password validation
@@ -119,7 +124,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [ STATIC_DIR, ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'core', 'static'),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
