@@ -1,0 +1,2 @@
+WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY="C:\Users\Mati\Documents\diseño web\Django\sumativa2\sumativa2\Wallet_WebMati")))
+SSL_SERVER_DN_MATCH=yes
